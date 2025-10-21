@@ -246,7 +246,7 @@ static void led_blink_task(void *arg)
         gpio_set_level(LED_GPIO, 0);
         vTaskDelay(pdMS_TO_TICKS(500));
         
-        // Check nếu đã paired
+        // Check if paired
         if (get_fabric_count() != 0) {
             ESP_LOGI(TAG, "Device paired! Stopping blink");
             gpio_set_level(LED_GPIO, 1);
