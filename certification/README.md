@@ -1,5 +1,46 @@
+# Matter Security
+**Certification Declaration**
+
+Another data construct that is necessary for Device Attestation is the Certification Declaration (CD), which is cryptographically signed by the Connectivity Standards Alliance and contains the Vendor and Device information as well as the PAA of the device. The CD must be put into the Device during manufacturing to be used during the Device Attestation process. The Commissioner will ask for the stored CD during the commissioning of the Node.
+<p align="center">
+  <img src="CD.png" alt="Certificate Declaration" width="30%" height="30%" />
+</p>
+**Device Attestation**
+Every device has a unique certificate that is signed by the manufacturer. There is no single root CA across all devices. During commissioning, the device is challenged to prove possession of the associated private key. The certificate can be validated against the Distributed Compliance Ledger (DCL) to verify device certification status.
+
+The hierarchy allows for a 3-level tier:
+
+- The first level is the Product Attestation Authority (PAA).
+
+- The PAA will be used to sign the Product Attestation Intermediate (PAI).
+
+- The PAI will be used to sign the Device Attestation Certificate (DAC). The DAC will be transferred to the commissioner and verified against the DCL.
+
+<p align="center">
+  <img src="DA.png" alt="Device Attestation" width="30%" height="30%"/>
+</p>
+
+The focus of this phase is to verify the authenticity of the Device. The high-level steps are:
+
+1. The Commissioner verifies the Device’s:
+
+- VID
+
+- PID
+
+- Certification status
+
+2. To do so, it uses:
+
+- Device Attestation Credentials
+
+- Distributed Compliance Ledger (DCL) or
+
+- Certification Declaration (CD)
+
+**Read more at:** [Silab Matter Security](https://docs.silabs.com/matter/2.7.0/matter-fundamentals-security/)<br>
+
 # Device certificate generation process
-![Certificate.png](Certificate.png)
 ## Create new Certificates for ESP32
 ### Create the Certificate Declaration
 1. The first thing to do is Export your custom VID/PID as environment variables to decrease chances of clerical error when editing your command arguments:
