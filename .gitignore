@@ -1,6 +1,5 @@
 .devcontainer/
 .vscode/
-hardware/
 build/
 components/
 managed_components/
