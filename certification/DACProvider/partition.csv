@@ -1,0 +1,14 @@
+key,type,encoding,value
+chip-factory,namespace,,
+discriminator,data,u32,2002
+iteration-count,data,u32,10000
+salt,data,string,Qc7XmvraRswi76ZEiPYnLevmq0Nwl1rCRkTNX809sj0=
+vendor-id,data,u32,65450
+vendor-name,data,string,NTS-20241000E
+product-id,data,u32,65441
+product-name,data,string,Plug
+hardware-ver,data,u32,1
+hw-ver-str,data,string,DevKit
+serial-num,data,string,88d318a526b3a95dd63f29d624dc9ad6
+verifier,data,string,LWpi6v1dycHNosu/unr5W7Vlbz2lqWRYO0mTGrr7TSEEz2QJUueQqRl3wABW3yhCIscXMvGUZgTmdQWuUWmSTE3EbjT6DhDry29tWOasnR2sPitmaKikhPcaAmKuTN7fIw==
+cert-dclrn,file,binary,Chip-Test-CD-FFAA-FFA1.der
