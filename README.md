@@ -180,10 +180,10 @@ Define in [app_priv.h](https://github.com/NgTSon/ESP-Matter-Smart-Plug/blob/main
 
 **PCB 3D Module ESP32-C6 Update later**
 
-2. Schematic and PCB Smart Plug
+2. Schematic and PCB Plug
 
 <p align="center">
-  <img src="./hardware/Smart Plug.png" alt="Schematic Plug" />
+  <img src="./hardware/Sch_Plug.png" alt="Schematic Plug" />
 </p>
 
 <p align="center"><strong>Schematic Plug</strong></p>
