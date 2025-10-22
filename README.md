@@ -1,71 +1,13 @@
 # Matter Plug ESP32
+**Content to be updated later**
+## Demo
+**Update later**
 ## SDK Version:
 - ESP-IDF: [v5.4.1](https://github.com/espressif/esp-idf/tree/v5.4.1)<br>
 - ESP-Matter-1.4: [de9164fbfd89a83fade503e67f6f0fb1931a1b95](https://github.com/espressif/esp-matter/tree/de9164fbfd89a83fade503e67f6f0fb1931a1b95)<br>
 - Connectedhomeip: [7a54749dc9df8706510767513f2f5656a3bd6f68](https://github.com/project-chip/connectedhomeip/tree/7a54749dc9df8706510767513f2f5656a3bd6f68)<br>
 
-## Build & Flash Firmware:
-Recommended before flashing:
-```c
-idf.py -p /dev/ttyACM0 erase-flash
-```
-
-1. Flash secure cert partition. Please check partition table for esp_secure_cert partition address.
-
-```c
-esptool.py -p /dev/ttyACM0 write_flash 0xd000 /.../ESP-Matter-Smart-Plug/certification/DACProvider/esp_secure_cert.bin
-```
-2. Flash factory partition, Please check the CONFIG_CHIP_FACTORY_NAMESPACE_PARTITION_LABEL for factory partition label. Then check the partition table for address and flash at that address.
-
-```c
-esptool.py -p /dev/ttyACM0 write_flash 0x10000 /.../ESP-Matter-Smart-Plug/certification/DACProvider/partition.bin
-```
-3. Config project
-```c
-idf.py set-target esp32c6
-```
-
-4. Flash Firmware
-
-```c
-idf.py -p /dev/ttyACM0 flash monitor
-```
-
-## Software (Matter)
-
-### Commissioning (Pairing) lần đầu
-
-1. **Khởi động thiết bị** 
-   - LED Blue sáng báo nguồn và Plug cùng LED RED tắt
-   - LED BLUE ON -> (PLUG và LED RED OFF)
-   - LED BLUE OFF -> (PLUG và LED RED ON)
-2. **Nhấn giữ nút 5 giây** 
-   - LED BlUE bắt đầu nhấp nháy (chế độ Commingssioning)
-3. **Mở app Matter Controller**:
-   - Google Home: Add Device → Matter
-   - Apple Home: Add Accessory → Scan QR Code
-   - Amazon Alexa: Add Device → Matter
-4. **Quét QR code** hoặc nhập thủ công với Setup Code
-5. **Hoàn tất commissioning** - LED ngừng nhấp nháy 
-
-### Chức năng nút nhấn
-
-| Thao tác | Chức năng |
-|----------|-----------|
-| **Nhấn nút ngắn (< 5s)** | Bật/Tắt ổ cắm (Toggle) |
-| **Nhấn giữ nút 5s (chưa pair)** | Mở chế độ Commissioning |
-| **Nhấn giữ nút 5s (đã pair)** | Factory reset + auto-commissioning |
-
-### Trạng thái LED BLUE
-
-| LED BLUE | Ý nghĩa |
-|-----|---------|
-| **LED BLUE ON** | Plug (LED RED) OFF|
-| **LED BLUE OFF**| Plug (LED RED) ON |
-| **Nhấp nháy chậm (500ms)** | Đang ở chế độ commissioning |
-| **Nhấp nháy nhanh (200ms)** | Factory reset đang thực hiện |
-
-### Project Tree Structure
+## Project Tree Structure
 ```c
 ESP-Matter-Smart-Plug/
 ├── certification/
@@ -98,22 +40,33 @@ ESP-Matter-Smart-Plug/
 └── sdkconfig.defaults.esp32c6
 ```
 
-
-
-## Hardware
-![alt text](hardware/Sch_MCU.png)
+## Build & Flash Firmware:
+Recommended before flashing:
 ```c
-#define PLUG_GPIO               GPIO_NUM_22
-#define LED_GPIO                GPIO_NUM_19
-#define BUTTON_GPIO             GPIO_NUM_9
+idf.py -p /dev/ttyACM0 erase-flash
 ```
-1. Schematic and PCB Module ESP32-C6
 
-**Update later**
+1. Flash secure cert partition. Please check partition table for esp_secure_cert partition address.
 
-2. Schematic and PCB Smart Plug
+```c
+esptool.py -p /dev/ttyACM0 write_flash 0xd000 /.../ESP-Matter-Smart-Plug/certification/DACProvider/esp_secure_cert.bin
+```
+2. Flash factory partition, Please check the CONFIG_CHIP_FACTORY_NAMESPACE_PARTITION_LABEL for factory partition label. Then check the partition table for address and flash at that address.
 
-**Update later**
+```c
+esptool.py -p /dev/ttyACM0 write_flash 0x10000 /.../ESP-Matter-Smart-Plug/certification/DACProvider/partition.bin
+```
+3. Config project
+```c
+idf.py set-target esp32c6
+```
+
+4. Flash Firmware
+
+```c
+idf.py -p /dev/ttyACM0 flash monitor
+```
+
 
 ## QR Code for commisioning
 <p align="center">
@@ -155,7 +108,7 @@ basicinformation read vendor-name <node-id> <endpoint>
 
 5. Open the commissioning window
 
-Open the commissioning window on the paired Matter device by using the following command pattern: open-commissioning-window 0x2002 1 300 10000 2002
+Open the commissioning window on the paired Matter device by using the following command pattern: open-commissioning-window 1 1 300 10000 2002
 ```c
 pairing open-commissioning-window <node_id> <option> <window_timeout> <iteration> <discriminator>
 ```
@@ -163,3 +116,82 @@ pairing open-commissioning-window <node_id> <option> <window_timeout> <iteration
 
 ## Matter Certificate
 - Detail in: [Matter Certification](https://github.com/NgTSon/ESP-Matter-Smart-Plug/tree/main/certification)<br>
+
+## Software (Matter)
+
+### Algorithm flowchart (Update later)
+
+### Endpoints, Clusters, Attributes using (Update later) 
+
+### Initial Commissioning (Pairing)
+
+1. **Power on the device** 
+   - Blue LED lights up to indicate power; Plug and Red LED are off.
+   - LED BLUE ON -> (PLUG và LED RED OFF)
+   - LED BLUE OFF -> (PLUG và LED RED ON)
+2. **Press and hold the button for 5 seconds** 
+   - Blue LED starts blinking (commissioning mode)
+3. **Open the Matter Controller app**:
+   - Google Home: Add Device → Matter
+   - Apple Home: Add Accessory → Scan QR Code
+   - Amazon Alexa: Add Device → Matter
+4. **Scan the QR code** or manually enter the Setup Code
+5. **Commissioning completed** - LED stop blingking
+
+### Button Functions
+
+| Action                                     | Function                     |
+| ------------------------------------------ | ---------------------------- |
+| **Short press (< 5s)**                     | Toggle the plug ON/OFF       |
+| **Press and hold for 5s (not yet paired)** | Enter commissioning mode           |
+| **Press and hold for 5s (already paired)** | Factory reset + auto-commissioning |
+
+
+### LED Status Indicators
+
+| BLUE LED                           | Meaning                  |
+| ---------------------------------- | ------------------------ |
+| **BLUE LED ON**                    | Plug (RED LED) is OFF    |
+| **BLUE LED OFF**                   | Plug (RED LED) is ON     |
+| **Slow blinking (500ms interval)** | In commissioning mode    |
+| **Fast blinking (200ms interval)** | Performing factory reset |
+
+
+
+## Hardware
+```c
+#define PLUG_GPIO               GPIO_NUM_22
+#define LED_GPIO                GPIO_NUM_19
+#define BUTTON_GPIO             GPIO_NUM_9
+```
+1. Schematic and PCB Module ESP32-C6
+<p align="center">
+  <img src="./hardware/Sch_MCU.png" width="50%" height="50%" alt="Schematic MCU" />
+</p>
+
+<p align="center"><strong>Schematic MCU</strong></p>
+
+<p align="center">
+  <img src="./hardware/PCB_MCU.png" width="50%" height="50%" alt="PCB MCU" />
+</p>
+
+<p align="center"><strong>PCB MCU</strong></p>
+
+**PCB 3D Module ESP32-C6 Update later**
+
+2. Schematic and PCB Smart Plug
+
+<p align="center">
+  <img src="./hardware/Smart Plug.png" alt="Schematic Plug" />
+</p>
+
+<p align="center"><strong>Schematic Plug</strong></p>
+
+**PCB 3D Module ESP32-C6 Update later**
+
+**PCB Smart Plug Update later**
+
+3. Datasheet
+
+**Datasheet Update later**
+
