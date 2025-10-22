@@ -101,14 +101,14 @@ ESP-Matter-Smart-Plug/
 
 
 ## Hardware
-Config in: [app_priv.h](https://github.com/NgTSon/ESP-Matter-Smart-Plug/blob/main/main/app_priv.h)<br>
+![alt text](hardware/Sch_MCU.png)
 ```c
 #define PLUG_GPIO               GPIO_NUM_22
 #define LED_GPIO                GPIO_NUM_19
 #define BUTTON_GPIO             GPIO_NUM_9
 ```
 1. Schematic and PCB Module ESP32-C6
-![alt text](Sch_MCU.png)
+
 **Update later**
 
 2. Schematic and PCB Smart Plug
