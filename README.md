@@ -159,6 +159,7 @@ pairing open-commissioning-window <node_id> <option> <window_timeout> <iteration
 
 
 ## Hardware
+Define in [app_priv.h](https://github.com/NgTSon/ESP-Matter-Smart-Plug/blob/main/main/app_driver.cpp)<br>
 ```c
 #define PLUG_GPIO               GPIO_NUM_22
 #define LED_GPIO                GPIO_NUM_19
