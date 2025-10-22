@@ -32,6 +32,74 @@ idf.py -p /dev/ttyACM0 flash monitor
 ```
 
 ## Software (Matter)
+
+### Commissioning (Pairing) lần đầu
+
+1. **Khởi động thiết bị** 
+   - LED Blue sáng báo nguồn và Plug cùng LED RED tắt
+   - LED BLUE ON -> (PLUG và LED RED OFF)
+   - LED BLUE OFF -> (PLUG và LED RED ON)
+2. **Nhấn giữ nút 5 giây** 
+   - LED BlUE bắt đầu nhấp nháy (chế độ Commingssioning)
+3. **Mở app Matter Controller**:
+   - Google Home: Add Device → Matter
+   - Apple Home: Add Accessory → Scan QR Code
+   - Amazon Alexa: Add Device → Matter
+4. **Quét QR code** hoặc nhập thủ công với Setup Code
+5. **Hoàn tất commissioning** - LED ngừng nhấp nháy 
+
+### Chức năng nút nhấn
+
+| Thao tác | Chức năng |
+|----------|-----------|
+| **Nhấn nút ngắn (< 5s)** | Bật/Tắt ổ cắm (Toggle) |
+| **Nhấn giữ nút 5s (chưa pair)** | Mở chế độ Commissioning |
+| **Nhấn giữ nút 5s (đã pair)** | Factory reset + auto-commissioning |
+
+### Trạng thái LED BLUE
+
+| LED BLUE | Ý nghĩa |
+|-----|---------|
+| **LED BLUE ON** | Plug (LED RED) OFF|
+| **LED BLUE OFF**| Plug (LED RED) ON |
+| **Nhấp nháy chậm (500ms)** | Đang ở chế độ commissioning |
+| **Nhấp nháy nhanh (200ms)** | Factory reset đang thực hiện |
+
+### Project Tree Structure
+```c
+ESP-Matter-Smart-Plug/
+├── certification/
+│   ├── README.md
+│   ├── Attestation/
+│   │   ├── test-DAC-FFAA-FFA1-cert.der
+│   │   ├── test-DAC-FFAA-FFA1-cert.pem
+│   │   ├── test-DAC-FFAA-FFA1-key.der
+│   │   ├── test-DAC-FFAA-FFA1-key.pem
+│   │   ├── test-PAI-FFAA-cert.der
+│   │   ├── test-PAI-FFAA-cert.pem
+│   │   └── test-PAI-FFAA-key.pem
+│   ├── Certification-Declaration/
+│   │   └── Chip-Test-CD-FFAA-FFA1.der
+│   └── DACProvider/
+│       ├── onb_codes.csv
+│       └── partition.csv
+│       ├── esp_secure_cert.bin
+|       └── partition.bin
+├── main/
+|    ├── app_driver.cpp
+|    ├── app_main.cpp
+|    ├── app_priv.h
+|    ├── CMakeLists.txt
+|    └── idf_component.yml
+├── CmakeLists.txt
+└── partitions.csv
+├── README.md
+├── sdkconfig.defaults
+└── sdkconfig.defaults.esp32c6
+```
+
+
+
 ## Hardware
 Config in: [app_priv.h](https://github.com/NgTSon/ESP-Matter-Smart-Plug/blob/main/main/app_priv.h)<br>
 ```c
@@ -39,9 +107,13 @@ Config in: [app_priv.h](https://github.com/NgTSon/ESP-Matter-Smart-Plug/blob/mai
 #define LED_GPIO                GPIO_NUM_19
 #define BUTTON_GPIO             GPIO_NUM_9
 ```
-1. Schematic Module ESP32-C6
+1. Schematic and PCB Module ESP32-C6
+![alt text](Sch_MCU.png)
+**Update later**
 
-2. Schematic Smart Plug
+2. Schematic and PCB Smart Plug
+
+**Update later**
 
 ## QR Code for commisioning
 <p align="center">

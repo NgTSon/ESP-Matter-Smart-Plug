@@ -24,19 +24,19 @@ The focus of this phase is to verify the authenticity of the Device. The high-le
 
 1. The Commissioner verifies the Device’s:
 
-- VID
+ - VID
 
-- PID
+ - PID
 
-- Certification status
+ - Certification status
 
 2. To do so, it uses:
 
-- Device Attestation Credentials
+ - Device Attestation Credentials
 
-- Distributed Compliance Ledger (DCL) or
+ - Distributed Compliance Ledger (DCL) or
 
-- Certification Declaration (CD)
+ - Certification Declaration (CD)
 
 **Read more at:** [Silab Matter Security](https://docs.silabs.com/matter/2.7.0/matter-fundamentals-security/)<br>
 
