@@ -2,3 +2,15 @@ CONFIG_IDF_TARGET="esp32c6"
 
 #LOG MONITOR COLOR
 CONFIG_LOG_COLORS=y
+
+# Disable the DS Peripheral support
+CONFIG_ESP_SECURE_CERT_DS_PERIPHERAL=n
+
+# Use DAC Provider implementation which reads attestation data from secure cert partition
+CONFIG_SEC_CERT_DAC_PROVIDER=y
+
+# Enable some options which reads CD and other basic info from the factory partition
+CONFIG_ENABLE_ESP32_FACTORY_DATA_PROVIDER=y
+CONFIG_ENABLE_ESP32_DEVICE_INSTANCE_INFO_PROVIDER=y
+CONFIG_FACTORY_COMMISSIONABLE_DATA_PROVIDER=y
+CONFIG_FACTORY_DEVICE_INSTANCE_INFO_PROVIDER=y
