@@ -44,6 +44,9 @@ Config in /main/app_priv.h
 2. Schematic Smart Plug
 
 ## QR Code for commisioning
-![qrcode.png](./certification/DACProvider/qrcode.png)
-Setup Code: 1559-121-2356
+<p align="center">
+  <img src="./certification/DACProvider/qrcode.png" alt="qrcode" />
+</p>
+
+<p align="center"><strong>Setup Code: 1559-121-2356</strong></p>
 ## Control and Read data using CHIP-TOOL:
