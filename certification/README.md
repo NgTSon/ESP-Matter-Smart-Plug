@@ -1,5 +1,5 @@
 # Device certificate generation process
-![Certificate.png](image.png)
+![Certificate.png](./image.png)
 ## Create new Certificates for ESP32
 ### Create the Certificate Declaration
 1. The first thing to do is Export your custom VID/PID as environment variables to decrease chances of clerical error when editing your command arguments:
