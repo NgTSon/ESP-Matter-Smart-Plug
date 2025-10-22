@@ -3,7 +3,7 @@
 
 Another data construct that is necessary for Device Attestation is the Certification Declaration (CD), which is cryptographically signed by the Connectivity Standards Alliance and contains the Vendor and Device information as well as the PAA of the device. The CD must be put into the Device during manufacturing to be used during the Device Attestation process. The Commissioner will ask for the stored CD during the commissioning of the Node.
 <p align="center">
-  <img src="CD.png" alt="Certificate Declaration" width="30%" height="30%" />
+  <img src="CD.png" alt="Certificate Declaration" width="50%" height="50%" />
 </p>
 **Device Attestation**
 Every device has a unique certificate that is signed by the manufacturer. There is no single root CA across all devices. During commissioning, the device is challenged to prove possession of the associated private key. The certificate can be validated against the Distributed Compliance Ledger (DCL) to verify device certification status.
@@ -17,7 +17,7 @@ The hierarchy allows for a 3-level tier:
 - The PAI will be used to sign the Device Attestation Certificate (DAC). The DAC will be transferred to the commissioner and verified against the DCL.
 
 <p align="center">
-  <img src="DA.png" alt="Device Attestation" width="30%" height="30%"/>
+  <img src="DA.png" alt="Device Attestation" width="50%" height="50%"/>
 </p>
 
 The focus of this phase is to verify the authenticity of the Device. The high-level steps are:
