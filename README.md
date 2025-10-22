@@ -20,8 +20,12 @@ esptool.py -p /dev/ttyACM0 write_flash 0xd000 /.../ESP-Matter-Smart-Plug/certifi
 ```c
 esptool.py -p /dev/ttyACM0 write_flash 0x10000 /.../ESP-Matter-Smart-Plug/certification/DACProvider/partition.bin
 ```
+3. Config project
+```c
+idf.py set-target esp32c6
+```
 
-3. Flash application and serial
+4. Flash Firmware
 
 ```c
 idf.py -p /dev/ttyACM0 flash monitor
@@ -41,5 +45,5 @@ Config in /main/app_priv.h
 
 ## QR Code for commisioning
 ![qrcode.png](./certification/DACProvider/qrcode.png)
-** Setup Code: 1559-121-2356 **
+Setup Code: 1559-121-2356
 ## Control and Read data using CHIP-TOOL:
