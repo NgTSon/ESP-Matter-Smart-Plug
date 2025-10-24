@@ -165,32 +165,45 @@ Define in [app_priv.h](https://github.com/NgTSon/ESP-Matter-Smart-Plug/blob/main
 #define LED_GPIO                GPIO_NUM_19
 #define BUTTON_GPIO             GPIO_NUM_9
 ```
-1. Schematic and PCB Module ESP32-C6
+### 1. Module ESP32-C6
+
 <p align="center">
-  <img src="./hardware/Sch_MCU.png" width="50%" height="50%" alt="Schematic MCU" />
+  <img src="./hardware/Module-ESP Schematic.png" width="70%" height="70%" alt="Schematic Module ESP32-C6" />
 </p>
 
 <p align="center"><strong>Schematic MCU</strong></p>
 
 <p align="center">
-  <img src="./hardware/PCB_MCU.png" width="50%" height="50%" alt="PCB MCU" />
+  <img src="./hardware/Module-ESP 2D.png" width="70%" height="70%" alt="PCB 2D Module ESP32-C6" />
 </p>
 
-<p align="center"><strong>PCB MCU</strong></p>
-
-**PCB 3D Module ESP32-C6 Update later**
-
-2. Schematic and PCB Plug
+<p align="center"><strong>PCB 2D Module ESP32-C6.png</strong></p>
 
 <p align="center">
-  <img src="./hardware/Sch_Plug.png" alt="Schematic Plug" />
+  <img src="./hardware/Module-ESP 3D.png" width="70%" height="70%" alt="PCB 3D Module ESP32-C6" />
 </p>
 
-<p align="center"><strong>Schematic Plug</strong></p>
+<p align="center"><strong>PCB 3D Module ESP32-C6</strong></p>
 
-**PCB 3D Module ESP32-C6 Update later**
+### 2. Module Plug
 
-**PCB Smart Plug Update later**
+<p align="center">
+  <img src="./hardware/Plug Schematic.png" alt="Schematic Plug" />
+</p>
+
+<p align="center"><strong>Schematic Module Plug</strong></p>
+
+<p align="center">
+  <img src="./hardware/Plug 2D.png" width="70%" height="70%" alt="PCB 2D Plug" />
+</p>
+
+<p align="center"><strong>PCB 2D Module Plug</strong></p>
+
+<p align="center">
+  <img src="./hardware/Plug 3D.png" width="70%" height="70%" alt="PCB 3D  PLug" />
+</p>
+
+<p align="center"><strong>PCB 3D Module Plug</strong></p>
 
 3. Datasheet
 
