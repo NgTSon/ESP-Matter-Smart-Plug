@@ -49,12 +49,12 @@ idf.py -p /dev/ttyACM0 erase-flash
 1. Flash secure cert partition. Please check partition table for esp_secure_cert partition address.
 
 ```c
-esptool.py -p /dev/ttyACM0 write_flash 0xd000 /.../ESP-Matter-Smart-Plug/certification/DACProvider/esp_secure_cert.bin
+esptool.py -p /dev/ttyUSB0 write_flash 0xd000 /.../ESP-Matter-Smart-Plug/certification/DACProvider/esp_secure_cert.bin
 ```
 2. Flash factory partition, Please check the CONFIG_CHIP_FACTORY_NAMESPACE_PARTITION_LABEL for factory partition label. Then check the partition table for address and flash at that address.
 
 ```c
-esptool.py -p /dev/ttyACM0 write_flash 0x10000 /.../ESP-Matter-Smart-Plug/certification/DACProvider/partition.bin
+esptool.py -p /dev/ttyUSB0 write_flash 0x10000 /.../ESP-Matter-Smart-Plug/certification/DACProvider/partition.bin
 ```
 3. Config project
 ```c
@@ -64,7 +64,7 @@ idf.py set-target esp32c6
 4. Flash Firmware
 
 ```c
-idf.py -p /dev/ttyACM0 flash monitor
+idf.py -p /dev/ttyUSB0 flash monitor
 ```
 
 
@@ -159,7 +159,7 @@ pairing open-commissioning-window <node_id> <option> <window_timeout> <iteration
 
 
 ## Hardware
-Define in [app_priv.h](https://github.com/NgTSon/ESP-Matter-Smart-Plug/blob/main/main/app_driver.cpp)<br>
+Define in [app_priv.h](https://github.com/NgTSon/ESP-Matter-Smart-Plug/blob/main/main/app_priv.h)<br>
 ```c
 #define PLUG_GPIO               GPIO_NUM_22
 #define LED_GPIO                GPIO_NUM_19
