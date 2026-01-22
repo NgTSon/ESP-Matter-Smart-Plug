@@ -205,6 +205,31 @@ Define in [app_priv.h](https://github.com/NgTSon/ESP-Matter-Smart-Plug/blob/main
 
 <p align="center"><strong>PCB 3D Module Plug</strong></p>
 
+### 3.PCB:
+<p align="center">
+  <img src="./hardware/PCB_F.png" 
+       style="width: 70%; clip-path: inset(20% 10% 20% 10%);" 
+       alt="PCB_F" />
+</p>
+
+<p align="center">
+  <img src="./hardware/PCB_R.png" 
+       style="width: 70%; clip-path: inset(30% 10% 20% 10%);" 
+       alt="PCB_R" />
+</p>
+
+<p align="center">
+  <img src="./hardware/PCB_Front.png" 
+       style="width: 70%; clip-path: inset(30% 10% 30% 30%);" 
+       alt="PCB_Front" />
+</p>
+
+<p align="center">
+  <img src="./hardware/PCB_Rear.png" 
+       style="width: 70%; clip-path: inset(20% 20% 20% 20%);" 
+       alt="PCB_Rear" />
+</p>
+
 3. Datasheet
 
 **Datasheet Update later**
