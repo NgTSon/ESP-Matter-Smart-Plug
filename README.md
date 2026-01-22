@@ -231,6 +231,5 @@ Define in [app_priv.h](https://github.com/NgTSon/ESP-Matter-Smart-Plug/blob/main
 </p>
 
 3. Datasheet
-
 **Datasheet Update later**
 
