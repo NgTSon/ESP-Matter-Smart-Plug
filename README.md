@@ -90,7 +90,7 @@ pairing code-wifi <node-id> <ssid> <passphrase>  <SetupCode>
 
 Toggle: onoff toggle 1 0x1
 ```c
-onoff on <node-id> <bit>
+onoff toggle <node-id> <bit>
 ```
 Set on: onoff on 1 0x1
 ```c
@@ -108,7 +108,7 @@ basicinformation read vendor-name <node-id> <endpoint>
 
 5. Open the commissioning window
 
-Open the commissioning window on the paired Matter device by using the following command pattern: open-commissioning-window 1 1 300 10000 2002
+Open the commissioning window on the paired Matter device by using the following command pattern: pairing open-commissioning-window 1 1 300 10000 2002
 ```c
 pairing open-commissioning-window <node_id> <option> <window_timeout> <iteration> <discriminator>
 ```
