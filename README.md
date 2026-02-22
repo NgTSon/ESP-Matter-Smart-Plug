@@ -1,10 +1,18 @@
 # Matter Plug ESP32
 ## Demo
 ### Demo with Chip-tool
-[![Watch the video](https://img.youtube.com/vi/6rf9T36GZWg/0.jpg)](https://www.youtube.com/watch?v=6rf9T36GZWg)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=6rf9T36GZWg">
+    <img src="https://img.youtube.com/vi/6rf9T36GZWg/0.jpg" alt="Watch the video">
+  </a>
+</p>
 
 ### Demo with Apple Homekit, Tuya, Home Assistant
-[![Watch the video](https://img.youtube.com/vi/daLqvrYXIjQ/0.jpg)](https://www.youtube.com/watch?v=daLqvrYXIjQ)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=daLqvrYXIjQ">
+    <img src="https://img.youtube.com/vi/daLqvrYXIjQ/0.jpg" alt="Watch the video">
+  </a>
+</p>
 
 - ESP-IDF: [v5.4.1](https://github.com/espressif/esp-idf/tree/v5.4.1)<br>
 - ESP-Matter-1.4: [de9164fbfd89a83fade503e67f6f0fb1931a1b95](https://github.com/espressif/esp-matter/tree/de9164fbfd89a83fade503e67f6f0fb1931a1b95)<br>
