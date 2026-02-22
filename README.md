@@ -1,6 +1,9 @@
 # Matter Plug ESP32
 ## Demo
-**Update later**
+### Demo with Chip-tool
+https://www.youtube.com/watch?v=6rf9T36GZWg
+### Demo with Apple Homekit, Tuya, Home Assistant
+https://www.youtube.com/watch?v=daLqvrYXIjQ
 ## SDK Version:
 - ESP-IDF: [v5.4.1](https://github.com/espressif/esp-idf/tree/v5.4.1)<br>
 - ESP-Matter-1.4: [de9164fbfd89a83fade503e67f6f0fb1931a1b95](https://github.com/espressif/esp-matter/tree/de9164fbfd89a83fade503e67f6f0fb1931a1b95)<br>
